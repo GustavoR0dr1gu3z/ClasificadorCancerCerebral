@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 from PIL import Image as im
 import cv2
-from im import *
+from im import * # De aqui estoy importando las rutas para que sea más rapido
 
 
 
@@ -50,9 +50,6 @@ height, width = primerF.shape[0:2]
 imR = cv2.getRotationMatrix2D((width/2, height/2),360,1)
 rot360 = cv2.warpAffine(primerF, imR, (width, height))
 cv2.imwrite(rutaT,rot360)
-"""""
-
-
 
 
 #Leemos las imagenes rotadas para despues convertirlas a una matriz
@@ -83,49 +80,4 @@ X0 = img000/255
 X1 = img111/255
 X2 = img222/255
 X3 = img333/255
-
-
-
-
-
-
-
-
-
-#Ruta de la imagen a tratar
-global ruta1
-ruta1 = ("C:/Users/franc/Documents/ClasificadorCancerCerebral/ImagenesOriginalesO/1.jpg")
-#Ruta de la imagen reducida
-global rutaR
-rutaR = ("C:/Users/franc/Documents/ClasificadorCancerCerebral/ImagenesReducidasO/r1.jpg")
-#Ruta de las imagenes guaradas rotadas
-global ruta90
-ruta90 = ("C:/Users/franc/Documents/ClasificadorCancerCerebral/ImagenesRotadasO/1_90.jpg")
-global ruta180
-ruta180 = ("C:/Users/franc/Documents/ClasificadorCancerCerebral/ImagenesRotadasO/1_180.jpg")
-global ruta270
-ruta270 = ("C:/Users/franc/Documents/ClasificadorCancerCerebral/ImagenesRotadasO/1_270.jpg")
-
-
-
-
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
