@@ -16,7 +16,7 @@ from sklearn.linear_model import Perceptron
 #Ruta Franck
 img = cv2.imread("C:/Users/franc/Documents/ClasificadorCancerCerebral/Imagenes_A_Predecir/2.jpg",0)
 #Ruta Gustavo
-img = cv2.imread("C:/Users/franc/Documents/ClasificadorCancerCerebral/Imagenes_A_Predecir/2.jpg",0)
+#img = cv2.imread("C:/Users/franc/Documents/ClasificadorCancerCerebral/Imagenes_A_Predecir/2.jpg",0)
 
 # Reeducimos la imagen a 100x300 pixeles para pasar a un arreglo de numpy
 primerF = cv2.resize(img, (100, 300))#(ancho->columnas)(largo->Renglones)
@@ -29,4 +29,12 @@ img444 = img44.reshape([30000,1]) #Tamaño dinámico
 
 # Lo dividimos para optimizar el funcionamiento
 xf = img444/255
+
+# Leemos los datos de entrenamiento previamente hechos en "Entrenamiento.py"
+datos = pd.read_csv("../data/data.csv")
+
+# Transponemos los datos del csv y los datos de la imagen a predecir
+datosFull = datos.T
+imT = xf.T    
+
 

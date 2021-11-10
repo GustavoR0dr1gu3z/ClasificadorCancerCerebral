@@ -16,13 +16,6 @@ from imgUsuario import *
 
 
 
-# Leemos los datos de entrenamiento previamente hechos en "Entrenamiento.py"
-datos = pd.read_csv("../data/data.csv")
-
-# Transponemos los datos del csv y los datos de la imagen a predecir
-datosFull = datos.T
-imT = xf.T    
-
 #Separamos las clase de las etiquetas
 # Clase
 X = datosFull.iloc[:, 0:-1]
