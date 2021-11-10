@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Perceptron 
 
 # Leemos la imagen a predecir
-img = cv2.imread("../Imagenes_A_Predecir/1.jpg",0)
+img = cv2.imread("../Imagenes_A_Predecir/2.jpg",0)
 
 # Reeducimos la imagen a 100x300 pixeles para pasar a un arreglo de numpy
 primerF = cv2.resize(img, (100, 300))#(ancho->columnas)(largo->Renglones)
