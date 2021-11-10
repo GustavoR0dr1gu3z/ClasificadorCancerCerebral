@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Perceptron 
 
 # Leemos la imagen a predecir
-img = cv2.imread("/home/franck2407/Downloads/ProyectoFinal/Imagnes_A_Predecir/13.jpg",0)
+img = cv2.imread("../Imagenes_A_Predecir/1.jpg",0)
 
 # Reeducimos la imagen a 100x300 pixeles para pasar a un arreglo de numpy
 primerF = cv2.resize(img, (100, 300))#(ancho->columnas)(largo->Renglones)
@@ -28,7 +28,7 @@ img444 = img44.reshape([30000,1]) #Tamaño dinámico
 xf = img444/255
 
 # Leemos los datos de entrenamiento previamente hechos en "Entrenamiento.py"
-datos = pd.read_csv("/home/franck2407/Downloads/ProyectoFinal/data/oficial.csv")
+datos = pd.read_csv("../data/data.csv")
 
 # Transponemos los datos del csv y los datos de la imagen a predecir
 datosFull = datos.T
@@ -57,6 +57,6 @@ print("La predicción es: ", int(perceptron.predict(imT)))
 
 # Para que el usuario entienda mas imprimimos la respuesta si es o no humano
 if((int(perceptron.predict(imT))) == 1):
-    print("Es un humano =D")
+    print("Es un tumor =c")
 else:
-    print("No es humano")
+    print("No es tumor ")
