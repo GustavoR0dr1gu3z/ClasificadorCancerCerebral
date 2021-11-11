@@ -14,7 +14,7 @@ from sklearn.linear_model import Perceptron
 # Leemos la imagen a predecir
 
 #Ruta Franck
-img = cv2.imread("C:/Users/franc/Documents/ClasificadorCancerCerebral/Imagenes_A_Predecir/2.jpg",0)
+img = cv2.imread("../Imagenes_A_Predecir/1.jpg",0)
 #Ruta Gustavo
 #img = cv2.imread("C:/Users/franc/Documents/ClasificadorCancerCerebral/Imagenes_A_Predecir/2.jpg",0)
 
